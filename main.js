@@ -20,28 +20,34 @@ function playGame() {
     }
 
     function playRound(humanChoice, computerChoice) {
-        console.log(`You chose: ${capitalize(humanChoice)}\nComputer chose: ${capitalize(computerChoice)}`);
+        let roundInfo = `You: ${capitalize(humanChoice)}\nComputer: ${capitalize(computerChoice)}\n`
 
         if (humanChoice === computerChoice) {
-            console.log(`Tie! You and the computer both chose ${capitalize(humanChoice)}.`);
+            roundInfo += `Tie! You and the computer both chose ${capitalize(humanChoice)}.`;
         }
         else if (
             (humanChoice === "rock" && computerChoice === "scissors") 
             || (humanChoice === "paper" && computerChoice === "rock") 
             || (humanChoice === "scissors" && computerChoice === "paper")) {
             humanScore++;
-            console.log(`You win! ${capitalize(humanChoice)} beats ${capitalize(computerChoice)}.`);
+            roundInfo += `You win! ${capitalize(humanChoice)} beats ${capitalize(computerChoice)}.`;
         }
         else {
             computerScore++;
-            console.log(`You lose! ${capitalize(computerChoice)} beats ${capitalize(humanChoice)}.`);
+            roundInfo += `You lose! ${capitalize(computerChoice)} beats ${capitalize(humanChoice)}.`;
         }
 
-        console.log(`\nUser Score: ${humanScore}\nComputer Score: ${computerScore}`);
+        alert(roundInfo);
+        alert(`User Score: ${humanScore}\nComputer Score: ${computerScore}`);
     }
 
-    for (let i = 1; i <= 5; i++) {
-        console.log(`Round ${i}`);
-        console.log(playRound(getHumanChoice(), getComputerChoice()));
+    alert("Welcome to Rock Paper Scissors!\nFirst to win 3 rounds wins the game.")
+
+    while (humanScore < 3 && computerScore < 3) {
+        playRound(getHumanChoice(), getComputerChoice());
     }
+
+    humanScore > computerScore ? alert("Congratulations, you are the winner of this game!") : alert("The computer is the winner of this game.");
 }
+
+playGame();
