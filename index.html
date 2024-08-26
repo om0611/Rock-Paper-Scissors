@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="welcome">Welcome to Rock Paper Scissors!</h1>
+    <h1 class="heading">Rock Paper Scissors</h1>
 
-    <button id="rock">🪨</button>
-    <button id="paper">📃</button>
-    <button id="scissors">✂️</button>
+    <div class="buttons">
+        <button id="rock">🪨</button>
+        <button id="paper">📃</button>
+        <button id="scissors">✂️</button>
+    </div>
+    
+    <div class="humanChoice info"></div>
+    <div class="computerChoice info"></div>
+    <div class="roundWinner info"></div>
+    <div class="humanScore info"></div>
+    <div class="computerScore info"></div>
 
-    <div class="humanChoice"></div>
-    <div class="computerChoice"></div>
-    <div class="roundWinner"></div>
-    <div class="humanScore"></div>
-    <div class="computerScore"></div>
-
-    <div class="gameWinner"></div>
+    <h2 class="gameWinner"></h2>
 
     <script src="main.js"></script>
 </body>

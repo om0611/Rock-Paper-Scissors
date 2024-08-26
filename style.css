@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.heading {
+    color: magenta;
+    font-size: 50px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+button {
+    font-size: 30px;
+    border: 1px blue solid;
+    border-radius: 5px;
+}
+
+#rock {
+    background-color: red;
+}
+
+#paper {
+    background-color: green;
+}
+
+#scissors {
+    background-color: yellow;
+}
+
+.info {
+    color: orange;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.gameWinner {
+    color: aqua;
+    text-align: center;
+    margin-top: 30px;
+}
