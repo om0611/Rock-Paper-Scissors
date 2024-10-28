@@ -12,5 +12,5 @@ A web-based version of Rock Paper Scissors where users can play against the comp
 [Live Demo on GitHub Pages](https://om0611.github.io/Rock-Paper-Scissors/)
 
 ## Technologies Used
-- **Language**: HTML, CSS, JavaScript
+- **Languages**: HTML, CSS, JavaScript
 
